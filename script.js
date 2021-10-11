@@ -34,7 +34,7 @@ console.log(netflixMovies);
 const amazonPrimeMovies = {
     action: "The Tomorrow War",
     drama: "One Night in Miami"
-}
+};
 console.log(amazonPrimeMovies);
 
 // 2c
@@ -51,7 +51,7 @@ console.log(streamingMovies);
 const disneyJunior = [
     "Mickey Mouse Clubhouse",
     "Spidey and His Amazing Friends"
-]
+];
 
 // 3b
 const [mickey, spidey] = disneyJunior;
@@ -63,10 +63,10 @@ console.log(mickey, spidey);
 const avengers = {
     warMachine: "James Rhodes",
     theHulk: "Bruce Banner"
-}
+};
 
 // 4b
-let {warMachine, theHulk} = avengers;
+const {warMachine, theHulk} = avengers;
 
 // 4c
 console.log(warMachine, theHulk);
@@ -76,13 +76,13 @@ const moreAvengers = {
     blackWidow: "Natasha Romanoff",
     hawkeye: "Clint Barton",
     ironMan: "Tony Stark"
-}
+};
 
 // 4e
 const {blackWidow: nat, ...others} = moreAvengers;
 
 // 4f
-console.log(moreAvengers);
+console.log(nat, other);
 
 // Bonus
 const bonus = {
@@ -93,8 +93,15 @@ const bonus = {
 
 // 5a
 const all = {
-    ...first,
-    ...second,
-    ...third
+    ...bonus["first"],
+    ...bonus["second"],
+    ...bonus["third"]
 }
 console.log(all);
+
+// 5b
+const {first, second, third} = bonus
+const [one, two, three] = first
+const [four, five, six] = second
+const [seven, eight, nine] = third
+console.log(one, two, three, four, five, six, seven, eight, nine);
